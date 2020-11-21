@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div id="main-header">
+            <div id="search-container" role="search">
+                <input id="search-bar" name="search-bar" type="text" placeholder="Type a Zipcode" />
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                    <path fill-rule="evenodd"
+                        d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                </svg>
+            </div>
+        </div>
+        <aside id="past-weather-searches"></aside>
+        <nav>
+            <ul class="nav-list">
+                <li><a id="current" href="#">Current</a></li>
+                <li><a id="hourly" class="active-nav" href="#">Hourly</a></li>
+                <li><a id="week" href="#">7 Day</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hourly-card" class="card">
+            <h2>Hourly Weather <span class="city"></span></h2>
+            <p class="current-hour"></p>
+            <h3 class="full-date"></h3>
+            <ul id="hourly-container">
+            </ul>
+        </section>
+        <section id="current-card" class="card">
+            <h2 class="current-heading"></h2>
+            <p class="current-hour"></p>
+            <h3 class="full-date"></h3>
+            <div class="current-main">
+                <div>
+                    <p class="current-temp"></p>
+                    <p class="current-condition"></p>
+                </div>
+                <div class="right-col">
+                    <img id="current-img" src="" />
+                    <p class="temp-range"></p>
+                </div>
+            </div>
+        </section>
+        <section id="weekly-card" class="card">
+            <h2>7 Day Forecast <span class="city"></span></h2>
+            <p class="current-hour"></p>
+            <ul id="weekly-container">
+            </ul>
+        </section>
+
+    </main>
+    <footer>
+        <p>Personal Portfolio Practice Project created by Luke Brown</p>
+        <div>Caret Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel
+                perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+        <div>
+            Longitude and Latitude coordinates calculated using <a href="https://www.mapbox.com/"
+                title="MapBox API">MapBox</a> API
+        </div>
+        <div>
+            Weather Data used from <a href="https://openweathermap.org/" title="OpenWeatherMap API">OpenWeatherMap</a>
+            API
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
